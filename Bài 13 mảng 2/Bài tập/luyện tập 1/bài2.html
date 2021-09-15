@@ -6,16 +6,15 @@
 </head>
 <body>
 <script>
-
-    let mang =[];
-    for(i =0 ;i<10 ;i++) {
-        mang[i] = parseInt(prompt("nhập giá trị  "));
+    let mang = [];
+    for (i = 0; i < 4; i++) {
+        mang[i] = parseInt(prompt("nhập giá trị  : "));
+        var max = Math.max.apply(Math, mang);
+        var index = mang.indexOf(Math.max.apply(Math, mang))
     }
-    document.write("Các Phần tử bạn vừa nhập : " + mang +"<br>")
-    var max = Math.max.apply(Math, mang);
+    document.write("Các Phần tử bạn vừa nhập : " + mang + "<br>");
+    document.write("Số lớn nhất trong mảng : " + max + "<br>" + " Tại vị trí : " + index + " <br>")
 
-    document.write("Số lớn nhất trong mảng : "+ max +"Tại vị trí : "+ i)
-    // khúc này em không biết tìm index của i :((
 </script>
 </body>
 </html>
