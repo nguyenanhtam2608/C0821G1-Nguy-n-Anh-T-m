@@ -21,13 +21,14 @@
         }
 
         getChuvi() {
-            return (dai + rong) / 2
+            return (this.dai + this.rong) / 2
         }
 
         getDientich() {
-            return dai * rong
+            return this.dai * this.rong
         }
     }
+
     let hcn = new HinhChuNhat(50, 10);
     let dai = hcn.getDai();
     let rong = hcn.getRong();
