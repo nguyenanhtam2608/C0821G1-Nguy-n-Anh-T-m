@@ -6,19 +6,26 @@
 </head>
 <body>
 <script>
-    let mang = [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        [11, 12, 23, 4, 5, 23, 34, 34, 43, 343]
-    ]
+
+
+    let row = parseInt(prompt("Nhập số dòng"));
+    let col = parseInt(prompt("Nhập số cột"));
+    let value;
     let sum = 0;
-    for (let i = 0; i < mang.length; i++) {
-        for (let j = 0; j < mang[i].length; j++) {
-            if (mang[i][j] % 2 === 0) {
-                document.write(mang[i][j] + "<br>")
-                sum += mang[i][j]
+    let array2d = new Array(row);
+    for (let row = 0; row < array2d.length; row++) {
+        array2d[row] = new Array(col);
+        for (let col = 0; col < array2d[row].length; col++) {
+            value = parseInt(prompt("Nhập số lượng [" + row + "] [" + col + "]"));
+            array2d[row][col] = value;
+            if (array2d[row][col] % 2 === 0) {
+                document.write(array2d[row][col] + " <br> ");
+                sum += array2d[row][col];
             }
         }
     }
-    document.write("Tông các số chẳn trong Array  : " + sum)
+    document.write("Tổng các số chẵn là : " + sum)
+
 </script>
 </body>
 </html>
